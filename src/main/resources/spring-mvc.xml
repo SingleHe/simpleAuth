@@ -21,7 +21,7 @@
          则service、dao层的bean可能也重新加载了，但事务的AOP代理没有配置在springmvc配置文件中，
          从而造成新加载的bean覆盖了老的bean，造成事务失效。
     -->
-    <context:component-scan base-package="web.controller" use-default-filters="false">
+    <context:component-scan base-package="com.singlehe.shiro.web.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
