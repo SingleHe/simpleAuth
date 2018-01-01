@@ -10,6 +10,7 @@
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:resources.properties"/>
+    <context:annotation-config/>
     <!--扫描注解Bean-->
     <context:component-scan base-package="com.singlehe.shiro">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
@@ -68,6 +69,6 @@
 
     <!--<bean class=""/>-->
 
-    <import resource="classpath:spring-config-cache.xml"/>
-    <import resource="classpath:spring-config-shiro.xml"/>
+    <!--<import resource="classpath:spring-config-cache.xml"/>
+    <import resource="classpath:spring-config-shiro.xml"/>-->
 </beans>
