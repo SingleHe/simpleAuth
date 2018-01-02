@@ -113,10 +113,10 @@ public class User implements Serializable {
         }
         String[] roleIdStrs = roleIdsStr.split(",");
         for(String roleIdStr : roleIdStrs){
-            if(StringUtils.isEmpty(roleIdsStr)){
+            if(StringUtils.isEmpty(roleIdStr)){
                 continue;
             }
-            getRoleIds().add(Long.valueOf(roleIdsStr));
+            getRoleIds().add(Long.valueOf(roleIdStr));
         }
     }
     @Override

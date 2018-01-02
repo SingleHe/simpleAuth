@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao{
     public User updateUser(User user) {
         String sql = "update sys_user set organization_id=?,username=?,password=?,salt=?,role_ids=?,locked=? where id=?";
         jdbcTemplate.update(sql,user.getOrganizationId(),user.getUserName(),user.getPassword()
-                            ,user.getSalt(),user.getRoleIdsStr(),user.getLocked());
+                            ,user.getSalt(),user.getRoleIdsStr(),user.getLocked(),user.getId());
         return user;
     }
 
