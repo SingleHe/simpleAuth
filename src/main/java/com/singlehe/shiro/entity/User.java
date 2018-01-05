@@ -82,7 +82,7 @@ public class User implements Serializable {
     public void setLocked(Boolean locked) {
         this.locked = locked;
     }
-    public String getCredentialsSalt(String salt){
+    public String getCredentialsSalt(){
         return userName + salt;
     }
 
