@@ -13,7 +13,7 @@ public class Resource implements Serializable{
     //资源类型:使用了枚举类型
     private ResourceType type = ResourceType.menu;
     public static enum ResourceType{
-        menu("菜单"),button("菜单");
+        menu("菜单"),button("按钮");
         private final String info;
         private ResourceType(String info){
             this.info = info;

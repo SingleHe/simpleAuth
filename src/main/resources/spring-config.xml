@@ -61,14 +61,14 @@
             <tx:method name="*" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
-    <!--<aop:config expose-proxy="true" proxy-target-class="true">
-        &lt;!&ndash; 只对业务逻辑层实施事务 &ndash;&gt;
-        <aop:pointcut id="txPointCut" expression="execution(*com.singlehe.shiro..service..*+.*(..))"/>
-        <aop:advisor id="txAdvisor" advice-ref="txAdvice" pointcut-ref="txPointCut"/>
-    </aop:config>-->
+    <aop:config expose-proxy="true" proxy-target-class="true">
+        <!-- 只对业务逻辑层实施事务 -->
+        <aop:pointcut id="txPointcut" expression="execution(* com.singlehe.shiro..service..*+.*(..))"/>
+        <aop:advisor id="txAdvisor" advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
 
     <!--<bean class=""/>-->
 
-    <!--<import resource="classpath:spring-config-cache.xml"/>
-    <import resource="classpath:spring-config-shiro.xml"/>-->
+    <import resource="classpath:spring-config-cache.xml"/>
+    <import resource="classpath:spring-config-shiro.xml"/>
 </beans>

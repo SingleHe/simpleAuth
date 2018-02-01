@@ -43,6 +43,6 @@
     <bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
     </bean>
 
-
+    <import resource="spring-mvc-shiro.xml"/>
 
 </beans>
